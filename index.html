@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush Kandari | Automotive Tech, Radar Systems & Web Engineering</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            obsidian: '#070B14',
+            surface: '#0E1525',
+            surfaceLight: '#162038',
+            cyanPulse: '#06B6D4',
+            amberShift: '#F59E0B',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #070B14;
+      color: #E2E8F0;
+      overflow-x: hidden;
+    }
+    .grid-bg {
+      background-image: 
+        linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .glass-card {
+      background: rgba(14, 21, 37, 0.78);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+    .glass-card:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+    }
+  </style>
+</head>
+<body class="grid-bg selection:bg-cyan-500/30 selection:text-cyan-200">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="font-display font-bold text-xl tracking-tight text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+        AYUSH<span class="text-cyan-400">.K</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">Profile</a>
+        <a href="#projects" class="hover:text-cyan-400 transition-colors">Radar & Builds</a>
+        <a href="#achievements" class="hover:text-cyan-400 transition-colors">Leadership & Academics</a>
+        <a href="#contact" class="px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500 hover:text-slate-950 transition-all">Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative pt-14 pb-20 lg:pt-20 lg:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-cyan-300 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          MANAV RACHNA UNIVERSITY • 1ST SEMESTER
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+          Ayush Kandari
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-amber-400 text-2xl sm:text-3xl lg:text-4xl mt-2">
+            Automotive Tech, Radar Systems & Web Engineering
+          </span>
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+          First-semester engineering student bridging <strong class="text-white font-medium">automotive systems & consultative sales</strong> with hands-on <strong class="text-white font-medium">HTML & Java web development</strong>, hardware radar prototyping, and proven team leadership on and off the football pitch.
+        </p>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#projects" class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-cyan-500/20">
+            Test Live Radar Simulator
+          </a>
+          <a href="#contact" class="px-6 py-3 rounded-xl glass-card hover:bg-slate-800/80 text-white font-medium text-sm transition-all">
+            Get in Touch
+          </a>
+        </div>
+
+        <!-- Quick Telemetry Stats -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80">
+          <div>
+            <div class="font-display text-2xl sm:text-3xl font-bold text-white">92.4%</div>
+            <div class="text-xs text-slate-400 font-mono uppercase mt-0.5">Class 10th Score</div>
+          </div>
+          <div>
+            <div class="font-display text-2xl sm:text-3xl font-bold text-cyan-400">Captain</div>
+            <div class="text-xs text-slate-400 font-mono uppercase mt-0.5">School Football</div>
+          </div>
+          <div>
+            <div class="font-display text-2xl sm:text-3xl font-bold text-amber-400">Auto + Dev</div>
+            <div class="text-xs text-slate-400 font-mono uppercase mt-0.5">Sales & Code Stack</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Right Card: Live Mini Radar HUD -->
+      <div class="lg:col-span-5">
+        <div class="glass-card rounded-2xl p-6 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider">Telemetry // Active Profile</span>
+            <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">ONLINE</span>
+          </div>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between py-2 border-b border-slate-800/80">
+              <span class="text-slate-400">University</span>
+              <span class="text-white font-medium">Manav Rachna University</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-800/80">
+              <span class="text-slate-400">Alma Mater</span>
+              <span class="text-white font-medium">Kalka Public School</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-800/80">
+              <span class="text-slate-400">Domain Focus</span>
+              <span class="text-cyan-300 font-medium">Automobiles, Sales & Tech</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-800/80">
+              <span class="text-slate-400">Core Stack</span>
+              <span class="text-amber-300 font-mono">HTML5 • Java • Radar</span>
+            </div>
+            <div class="flex justify-between py-2">
+              <span class="text-slate-400">Strengths</span>
+              <span class="text-white font-medium">Leadership & Communication</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Flagship Project & Interactive Radar Simulator -->
+  <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Engineering & Builds</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-1">Radar System & Web Projects</h2>
+      </div>
+      <!-- Filter Buttons -->
+      <div class="flex gap-2">
+        <button onclick="filterProjects('all')" id="btn-all" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-mono bg-cyan-500 text-slate-950 font-semibold transition-all">ALL BUILDS</button>
+        <button onclick="filterProjects('hardware')" id="btn-hardware" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-mono glass-card text-slate-300 hover:text-white transition-all">RADAR & AUTO</button>
+        <button onclick="filterProjects('web')" id="btn-web" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-mono glass-card text-slate-300 hover:text-white transition-all">HTML & JAVA</button>
+      </div>
+    </div>
+
+    <!-- Interactive Radar Flagship Card -->
+    <div data-category="hardware" class="project-card glass-card rounded-2xl p-6 sm:p-8 mb-8 border border-cyan-500/30">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
+            FLAGSHIP PROJECT
+          </div>
+          <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Ultrasonic / RF Object Detection Radar</h3>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Built a working radar scanning system capable of sweeping a 180-degree field of view, detecting physical obstacles in real time, and plotting distance and angle coordinates—ideal for automotive proximity and collision-avoidance applications.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-xs font-mono text-cyan-300">
+            INTERACTIVE DEMO: Click anywhere inside the radar screen on the right to place custom obstacle targets and watch the sweep detect them.
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Proximity Sensing</span>
+            <span class="px-3 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Automotive ADAS Concept</span>
+            <span class="px-3 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Real-Time Plotting</span>
+          </div>
+        </div>
+
+        <!-- Live Interactive Canvas Radar -->
+        <div class="lg:col-span-7 flex flex-col items-center">
+          <div class="relative w-full max-w-md bg-slate-950 rounded-2xl p-4 border border-cyan-500/30 shadow-inner">
+            <div class="flex justify-between items-center text-[11px] font-mono text-cyan-400 mb-2">
+              <span>SWEEP: 180° SECTOR</span>
+              <span id="radar-readout">TARGETS DETECTED: 2</span>
+            </div>
+            <canvas id="radarCanvas" width="400" height="230" class="w-full h-auto rounded-lg cursor-crosshair bg-[#040810]"></canvas>
+            <div class="flex justify-between items-center mt-3">
+              <span class="text-[11px] font-mono text-slate-400">Click radar grid to add obstacle</span>
+              <button onclick="resetTargets()" class="px-3 py-1 rounded bg-cyan-500/15 hover:bg-cyan-500/30 text-cyan-300 text-xs font-mono border border-cyan-500/30 transition-colors">
+                Reset Targets
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondary Cards Grid -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <div data-category="web" class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 text-xs font-mono">WEB ENGINEERING</span>
+            <span class="text-xs font-mono text-slate-400">HTML5 • JAVA</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white mb-2">Multi-Page Web Applications</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Designed and built multiple responsive websites combining structured HTML frontends with Java-backed logic, focusing on clean layout architecture, fast navigation, and user-friendly interfaces.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-3 border-t border-slate-800/80">
+          <span class="text-xs font-mono text-slate-400">#HTML</span>
+          <span class="text-xs font-mono text-slate-400">#Java</span>
+          <span class="text-xs font-mono text-slate-400">#ResponsiveUI</span>
+        </div>
+      </div>
+
+      <div data-category="hardware" class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 text-xs font-mono">AUTOMOTIVE & SALES</span>
+            <span class="text-xs font-mono text-slate-400">DOMAIN EXPERTISE</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white mb-2">Automobile Tech & Consultative Sales</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Deep familiarity with modern vehicle specifications, powertrain segments, onboard safety tech, and customer-centric automotive sales communication—translating technical specs into clear buyer value.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-3 border-t border-slate-800/80">
+          <span class="text-xs font-mono text-slate-400">#Automobiles</span>
+          <span class="text-xs font-mono text-slate-400">#SalesStrategy</span>
+          <span class="text-xs font-mono text-slate-400">#TechSpecs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership, Skills & Academics -->
+  <section id="achievements" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Track Record</span>
+    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-1 mb-10">Leadership, Skills & Education</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Sports Leadership -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold mb-4">
+          01
+        </div>
+        <h3 class="font-display text-xl font-bold text-white mb-2">Football Sports Captain</h3>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Led the school football squad as Captain at Kalka Public School—organizing match tactics, motivating teammates under pressure, and representing the school in inter-school tournaments.
+        </p>
+      </div>
+
+      <!-- Communication & Interpersonal -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold mb-4">
+          02
+        </div>
+        <h3 class="font-display text-xl font-bold text-white mb-2">Leadership & Communication</h3>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Strong public speaking, team coordination, and persuasive sales communication skills honed through sports captaincy, technical project demos, and client-facing automotive discussions.
+        </p>
+      </div>
+
+      <!-- Education -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold mb-4">
+          03
+        </div>
+        <h3 class="font-display text-xl font-bold text-white mb-2">Academic Foundation</h3>
+        <ul class="space-y-2.5 text-sm text-slate-300">
+          <li>
+            <span class="text-white font-semibold block">Manav Rachna University</span>
+            <span class="text-slate-400 text-xs">Undergraduate • 1st Semester (Present)</span>
+          </li>
+          <li class="pt-2 border-t border-slate-800/80">
+            <span class="text-white font-semibold block">Kalka Public School</span>
+            <span class="text-cyan-400 font-mono text-xs">Class 10th Aggregate: 92.4%</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <footer id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-800/80">
+    <div class="glass-card rounded-2xl p-8 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Direct Contact</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-1">Let's Connect & Collaborate</h2>
+        <p class="text-slate-300 text-sm mt-2 max-w-xl">
+          Open to tech projects, automotive industry discussions, internships, and collaborative web or hardware builds.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+        <button onclick="copyText('ayushkandaridelhi@gmail.com', this)" class="px-5 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-left transition-all group">
+          <div class="text-[11px] font-mono text-slate-400 uppercase">Email (Click to Copy)</div>
+          <div class="text-sm font-medium text-cyan-400 group-hover:text-cyan-300 mt-0.5">ayushkandaridelhi@gmail.com</div>
+        </button>
+
+        <button onclick="copyText('9315132146', this)" class="px-5 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-left transition-all group">
+          <div class="text-[11px] font-mono text-slate-400 uppercase">Phone (Click to Copy)</div>
+          <div class="text-sm font-medium text-amber-400 group-hover:text-amber-300 mt-0.5">+91 93151 32146</div>
+        </button>
+      </div>
+    </div>
+    <div class="text-center text-xs font-mono text-slate-500 mt-8">
+      © 2026 Ayush Kandari • Manav Rachna University
+    </div>
+  </footer>
+
+  <script>
+    // Copy to Clipboard Helper
+    function copyText(text, btn) {
+      navigator.clipboard.writeText(text);
+      const label = btn.querySelector('div:first-child');
+      const original = label.textContent;
+      label.textContent = 'COPIED TO CLIPBOARD!';
+      label.classList.add('text-emerald-400');
+      setTimeout(() => {
+        label.textContent = original;
+        label.classList.remove('text-emerald-400');
+      }, 1800);
+    }
+
+    // Project Category Filter
+    function filterProjects(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('bg-cyan-500', 'text-slate-950', 'font-semibold');
+        btn.classList.add('glass-card', 'text-slate-300');
+      });
+      const activeBtn = document.getElementById('btn-' + category);
+      activeBtn.classList.remove('glass-card', 'text-slate-300');
+      activeBtn.classList.add('bg-cyan-500', 'text-slate-950', 'font-semibold');
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Interactive Radar Simulator
+    const canvas = document.getElementById('radarCanvas');
+    const ctx = canvas.getContext('2d');
+    const cx = canvas.width / 2;
+    const cy = canvas.height - 15;
+    const maxR = 195;
+    let angle = 0;
+    let dir = 1;
+
+    let targets = [
+      { x: cx - 75, y: cy - 95, ping: 0 },
+      { x: cx + 90, y: cy - 110, ping: 0 }
+    ];
+
+    function resetTargets() {
+      targets = [
+        { x: cx - 75, y: cy - 95, ping: 0 },
+        { x: cx + 90, y: cy - 110, ping: 0 }
+      ];
+      document.getElementById('radar-readout').textContent = `TARGETS DETECTED: ${targets.length}`;
+    }
+
+    canvas.addEventListener('click', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const x = (e.clientX - rect.left) * scaleX;
+      const y = (e.clientY - rect.top) * scaleY;
+      const dist = Math.hypot(x - cx, y - cy);
+      if (dist <= maxR && y <= cy) {
+        targets.push({ x, y, ping: 1 });
+        document.getElementById('radar-readout').textContent = `TARGETS DETECTED: ${targets.length}`;
+      }
+    });
+
+    function drawRadar() {
+      ctx.fillStyle = 'rgba(4, 8, 16, 0.22)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Draw Concentric Arcs
+      ctx.strokeStyle = 'rgba(6, 182, 212, 0.22)';
+      ctx.lineWidth = 1;
+      for (let r = 48; r <= maxR; r += 49) {
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, Math.PI, 2 * Math.PI);
+        ctx.stroke();
+      }
+
+      // Draw Angle Lines
+      for (let deg = 0; deg <= 180; deg += 30) {
+        const rad = (deg * Math.PI) / 180;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.lineTo(cx - maxR * Math.cos(rad), cy - maxR * Math.sin(rad));
+        ctx.stroke();
+      }
+
+      // Sweep Beam
+      const sweepRad = (angle * Math.PI) / 180;
+      const sx = cx - maxR * Math.cos(sweepRad);
+      const sy = cy - maxR * Math.sin(sweepRad);
+
+      const grad = ctx.createLinearGradient(cx, cy, sx, sy);
+      grad.addColorStop(0, 'rgba(6, 182, 212, 0.1)');
+      grad.addColorStop(1, 'rgba(6, 182, 212, 0.85)');
+
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(sx, sy);
+      ctx.stroke();
+
+      // Targets Detection
+      targets.forEach(t => {
+        const tAngle = (Math.atan2(cy - t.y, cx - t.x) * 180) / Math.PI;
+        if (Math.abs(tAngle - angle) < 3.5) {
+          t.ping = 1.0;
+        }
+        if (t.ping > 0.02) {
+          ctx.fillStyle = `rgba(245, 158, 11, ${t.ping})`;
+          ctx.beginPath();
+          ctx.arc(t.x, t.y, 5, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.strokeStyle = `rgba(245, 158, 11, ${t.ping * 0.6})`;
+          ctx.beginPath();
+          ctx.arc(t.x, t.y, 11 * (1.2 - t.ping), 0, Math.PI * 2);
+          ctx.stroke();
+
+          t.ping *= 0.965;
+        }
+      });
+
+      angle += dir * 1.4;
+      if (angle >= 180 || angle <= 0) dir *= -1;
+
+      requestAnimationFrame(drawRadar);
+    }
+
+    drawRadar();
+  </script>
+</body>
+</html>
